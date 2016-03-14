@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="32dp"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:id="@+id/txtvDate"
+            android:paddingLeft="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:text="만료 날짜를 선택해주세요."
+            android:gravity="center_vertical"
+            android:textColor="@color/grey_500"
+            android:textSize="18sp" />
+
+
+        <com.gelato.gelato.tools.NoDefaultSpinner
+            android:layout_marginLeft="16dp"
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/etxtMission"
+            android:padding="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:hint="미션 설명을 입력해 주세요." />
+
+    </LinearLayout>
+
+</LinearLayout>

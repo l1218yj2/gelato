@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:gravity="center_vertical|center_horizontal"
+    android:background="?attr/colorPrimary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가입이 완료되었습니다. \n 축하드립니다."
+        android:id="@+id/welcome_noti_textView"
+        android:layout_weight="0.37"
+        android:textSize="22dp"
+        android:gravity="center_vertical|center_horizontal"
+       android:textColor="@color/white"/>
+
+</LinearLayout>

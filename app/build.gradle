@@ -1,0 +1,123 @@
+apply plugin: 'com.android.application'
+
+//for gms, analytics
+apply plugin: 'com.google.gms.google-services'
+
+//for analytics @~~
+apply plugin: 'galette'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    repositories {
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'http://devrepo.kakao.com:8088/nexus/content/groups/public/' }
+    }
+
+    defaultConfig {
+        applicationId "com.gelato.gelato"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 5
+        versionName "1.0.5"
+        multiDexEnabled true
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // google
+    compile 'com.android.support:support-v13:23.2.0'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:design:23.2.0'
+    compile 'com.android.support:recyclerview-v7:23.2.0'
+    compile 'com.android.support:cardview-v7:23.2.0'
+// Facebook SDK
+    compile 'com.facebook.android:facebook-android-sdk:4.8.1'
+    // for singleton instance
+    compile 'com.android.support:multidex:1.0.1'
+
+    // Google message service
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+
+
+    compile 'com.code-troopers.betterpickers:library:2.5.1'
+    //google analytics
+    compile 'com.google.android.gms:play-services-analytics:8.4.0'
+
+    // DiskLruCache
+    compile 'com.jakewharton:disklrucache:2.0.2'
+
+    // divider
+    compile 'com.yqritc:recyclerview-flexibledivider:1.2.5'
+
+    // Sqlite tools
+    compile 'com.j256.ormlite:ormlite-android:4.48'
+
+    //Retrofit for all networking
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:converter-jackson:2.0.0-beta4'
+
+    //for imageloading
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile 'org.jetbrains:annotations:13.0'
+
+    compile 'me.grantland:autofittextview:0.2.1'
+
+    compile 'com.commit451:PhotoView:1.2.4'
+
+    compile ('com.github.ganfra:material-spinner:1.1.1'){
+        exclude group: 'com.nineoldandroids', module: 'library'
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+    }
+
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.6@aar'){
+        transitive = true
+    }
+
+    compile('com.github.afollestad.material-dialogs:commons:0.8.5.6@aar') {
+        transitive = true
+    }
+
+    compile 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.7.0'
+
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+
+    compile 'jp.wasabeef:glide-transformations:1.3.1'
+    // If you want to use the GPU Filters
+    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.3.0'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+
+    // 카카오톡 sdk를 사용하기 위해 필요.
+    compile group: 'com.kakao.sdk', name: 'kakaolink', version: '1.1.7'
+}

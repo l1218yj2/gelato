@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/channels"
+        android:icon="@drawable/ic_channel"
+        android:title="진행중인 채널">
+        <menu>
+
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/expired_channels"
+        android:icon="@drawable/ic_channel"
+        android:title="만료된 채널">
+        <menu>
+
+        </menu>
+    </item>
+
+    <item android:title="기타">
+        <menu>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_alarm_copy"
+                android:title="알림설정" />
+        </menu>
+    </item>
+
+</menu>

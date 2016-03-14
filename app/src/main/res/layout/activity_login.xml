@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@+id/imgvCover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/btnFacebookLogin"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <com.gelato.gelato.tools.RippleView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/btnFacebook"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        android:elevation="2dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/facebooks"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--<ImageView-->
+            <!--android:layout_width="24dp"-->
+            <!--android:layout_height="24dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginRight="12dp"-->
+            <!--android:src="@drawable/ic_facebook_white_36dp"/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/txtvFacebook"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:text="페이스북으로 시작하기"-->
+            <!--android:textColor="#fff"-->
+            <!--android:textSize="14dp" />-->
+        </LinearLayout>
+    </com.gelato.gelato.tools.RippleView>
+
+</RelativeLayout>
